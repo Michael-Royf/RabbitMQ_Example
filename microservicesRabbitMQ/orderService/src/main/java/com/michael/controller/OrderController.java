@@ -1,7 +1,8 @@
 package com.michael.controller;
 
-import com.michael.dto.Order;
-import com.michael.dto.OrderEvent;
+
+import com.michael.clients.dtoOrders.Order;
+import com.michael.clients.dtoOrders.OrderEvent;
 import com.michael.publisher.OrderProducer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;

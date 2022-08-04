@@ -1,6 +1,7 @@
 package com.michael.publisher;
 
-import com.michael.dto.OrderEvent;
+
+import com.michael.clients.dtoOrders.OrderEvent;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,10 +13,11 @@ import org.springframework.stereotype.Service;
 public class OrderProducer {
     @Value("${rabbitmq.exchange.name}")
     private String exchange;
-
+    //for order
     @Value("${rabbitmq.binding.routing.key}")
     private String orderRoutingKey;
 
+    //for email
     @Value("${rabbitmq.binding.email.routing.key}")
     private String emailRoutingKey;
 
